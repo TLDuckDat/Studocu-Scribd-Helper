@@ -1,0 +1,62 @@
+/* ==================== STUDOCU CLEAN RULES ==================== */
+html, body {
+    overflow: auto !important;
+    height: auto !important;
+    user-select: text !important; 
+}
+
+#upgrade-overlay,
+.banner-wrapper,
+[class*="paywall"],
+[class*="overlay"]:not(#std-helper-overlay),
+#page-container-wrapper + div,
+.advertisement,
+#onetrust-consent-sdk {
+    display: none !important;
+    z-index: -9999 !important;
+}
+
+.pf, .pc, #document-wrapper {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+/* ==================== SCRIBD CLEAN, UNBLUR & BRAVE ANTI-ADBLOCK RULES ==================== */
+.between_page_portal_root,
+.auto__doc_page_webpack_doc_page_blur_promo,
+.promo_div,
+[data-e2e="ads-for-access-promo"],
+._3jL30R,
+[class*="AdBlockerModal-module_wrapper"],
+[class*="AdBlockerModal-module_modalBackground"],
+[class*="AdBlockerModal-module_modal"],
+.osano-cm-window,
+.osano-cm-dialog,
+[class*="paywall"],
+[class*="blur_promo"],
+.mobile_overlay {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    z-index: -9999 !important;
+}
+
+.outer_page.blurred_page .text_layer,
+.outer_page.blurred_page .text_layer span,
+.outer_page.blurred_page .text_layer div,
+.outer_page .text_layer [style*="text-shadow"] {
+    text-shadow: none !important;
+    color: #000 !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1 !important;
+}
+
+.outer_page.blurred_page .image_layer img,
+.outer_page .image_layer img {
+    opacity: 1 !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+}

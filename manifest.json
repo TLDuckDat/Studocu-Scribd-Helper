@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Studocu & Scribd Helper",
+  "version": "1.0", 
+  "permissions": [
+    "cookies",
+    "scripting",  
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*.studocu.com/*",
+    "*://*.studocu.vn/*",
+    "*://*.scribd.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Studocu & Scribd Tools"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.studocu.com/*",
+        "*://*.studocu.vn/*",
+        "*://*.scribd.com/*"
+      ],
+      "css": ["custom_style.css"],
+      "js": ["content_script.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["viewer_styles.css"],
+      "matches": [
+        "*://*.studocu.com/*",
+        "*://*.studocu.vn/*",
+        "*://*.scribd.com/*"
+      ]
+    }
+  ]
+}
